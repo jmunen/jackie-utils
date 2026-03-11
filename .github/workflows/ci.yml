@@ -26,12 +26,12 @@ jobs:
         run: python -m pip install --upgrade pip
 
       - name: Install package and test tools
-        run:
+        run: |
           python -m pip install -e .
           python -m pip install pytest build twine
 
       - name: Run tests
-        run:  python -m pytest
+        run: python -m pytest
 
       - name: Build package
         run: python -m build
