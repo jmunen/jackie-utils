@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jackie-utils"
+version = "0.1.0"
+description = "Reusable Python utility library with modern packaging,testing and CI workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Jackline Munene", email = "jackienimms@gmail.com"}
+]
+license = {text = "MIT"}
+keywords = ["python", "utilities", "packaging", "pypi", "githubactions"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Licence :: OSI Approved :: MIT Licence",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+[project.urls]
+Homepage = "https://github.com/jmunen/jackie-utils"
+Repository = "https://github.com/jmunen/jackie-utils"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
